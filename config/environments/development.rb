@@ -15,7 +15,16 @@ config.action_controller.perform_caching             = false
 
 
 #CLEARANCE
-HOST = "localhost"
+HOST = "localhost:3000"
+
+ActionMailer::Base.smtp_settings = {
+  :address => "mail.chikasawa.com.br",
+  :port => 25,
+  :domain => "mail.chikasawa.com.br",
+  :user_name => "funfactorysoftware@chikasawa.com.br",
+  :password => "*********",
+  :authentication => :login
+}
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
